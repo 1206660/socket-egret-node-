@@ -93,14 +93,15 @@ class Main extends eui.UILayer {
         result.texture = texture;
         return result;
     }
+
     private onSocketOpen(): void {
-        var cmd = "Hello Egret WebSocket";
+        let cmd = "Hello Egret WebSocket";
         console.log("连接成功，发送数据：" + cmd);
         this.webSocket.writeUTF(cmd);
     }
 
     private onReceiveMessage(e: egret.Event): void {
-        var msg = this.webSocket.readUTF();
+        let msg = this.webSocket.readUTF();
         console.log("收到数据：" + msg);
     }
 }
